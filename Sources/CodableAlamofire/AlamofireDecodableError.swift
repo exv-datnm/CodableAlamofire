@@ -14,18 +14,19 @@ import Foundation
 /// - invalidJSON:      Returned when a nested json is invalid.
 
 public enum AlamofireDecodableError: Error {
-    case invalidKeyPath
-    case emptyKeyPath
-    case invalidJSON
+  case invalidKeyPath
+  case emptyKeyPath
+  case invalidJSON
 }
 
 extension AlamofireDecodableError: LocalizedError {
-    
-    public var errorDescription: String? {
-        switch self {
-        case .invalidKeyPath:   return "Nested object doesn't exist by this keyPath."
-        case .emptyKeyPath:     return "KeyPath can not be empty."
-        case .invalidJSON:      return "Invalid nested json."
-        }
+  
+  public var errorDescription: String? {
+    switch self {
+    case .invalidKeyPath:   return "Nested object doesn't exist by this keyPath."
+    case .emptyKeyPath:     return "KeyPath can not be empty."
+    case .invalidJSON:      return "Invalid nested json."
     }
+  }
 }
+

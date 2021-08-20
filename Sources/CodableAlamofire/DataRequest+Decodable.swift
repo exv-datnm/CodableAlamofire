@@ -31,3 +31,16 @@ extension DataRequest {
   }
 }
 
+extension JSONDecoder {
+  public class var dateDecodingSecondsSince1970: JSONDecoder {
+    dateDecodingStrategy()
+  }
+  
+  public class func dateDecodingStrategy(_ dateDecodingStrategy: DateDecodingStrategy = .secondsSince1970) -> JSONDecoder {
+    let decoder: JSONDecoder = JSONDecoder()
+    decoder.dateDecodingStrategy = dateDecodingStrategy // It is necessary for correct decoding. Timestamp -> Date.
+    return decoder
+  }
+}
+
+

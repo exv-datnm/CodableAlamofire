@@ -105,7 +105,7 @@ To integrate CodableAlamofire, simply add the following line to your `Podfile`:
 target 'Test' do
   use_frameworks!
 
-  pod 'CodableAlamofire'
+  pod 'CodableAlamofire', :git => 'https://github.com/exv-datnm/CodableAlamofire.git'
   
 end
 ```
@@ -122,7 +122,7 @@ $ brew install carthage
 ```
 To integrate CodableAlamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
 ```odgl
-github "Otbivnoe/CodableAlamofire"
+github "exv-datnm/CodableAlamofire"
 ```
 
 Run `carthage update` to build the framework and drag the built `CodableAlamofire.framework` into your Xcode project.
